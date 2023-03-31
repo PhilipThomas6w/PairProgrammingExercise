@@ -23,21 +23,6 @@ public class Program
         }
 
         return $"You have {counts[0]} £2 coins, {counts[1]} £1 coins, {counts[2]} 50ps, {counts[3]} 20ps, {counts[4]} 10ps, {counts[5]} 5ps, {counts[6]} 2ps, and {counts[7]} 1ps.";
-        
-        
-        
-        
-        //while (remainder > 0)
-        //{
-            
-        //}
-
-        //for (int i = 0; i < 8; i++)
-        //{
-        //    counts[i] = remainder / denominations[i];
-        //}
-
-        //return counts;
     }
 
 
