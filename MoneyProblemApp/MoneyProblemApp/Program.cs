@@ -4,21 +4,40 @@ public class Program
 {
     static void Main()
     {
-        
+        Console.WriteLine(CurrencyCalculator(7.88M));
     }
 
-    public static int[] CurrencyCalculator(decimal moneyIn)
+    public static string CurrencyCalculator(decimal moneyIn)
     {
         int [] denominations = {200, 100, 50, 20, 10, 5, 2, 1};
-        int[] counts = new int[8];
+        int[] counts = new int[denominations.Length];
         int remainder = (int)(moneyIn * 100);
 
-        for(int i = 0; i < 8; i++)
+        for (int i = 0; i < counts.Length; i++)
         {
-            counts[i] = remainder / denominations[i];
+            while (remainder >= denominations[i])
+            {
+                counts[i]++;
+                remainder -= denominations[i];
+            }
         }
 
-        return counts;
+        return $"You have {counts[0]} £2 coins, {counts[1]} £1 coins, {counts[2]} 50ps, {counts[3]} 20ps, {counts[4]} 10ps, {counts[5]} 5ps, {counts[6]} 2ps, and {counts[7]} 1ps.";
+        
+        
+        
+        
+        //while (remainder > 0)
+        //{
+            
+        //}
+
+        //for (int i = 0; i < 8; i++)
+        //{
+        //    counts[i] = remainder / denominations[i];
+        //}
+
+        //return counts;
     }
 
 
